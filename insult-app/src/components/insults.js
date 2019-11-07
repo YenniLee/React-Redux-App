@@ -10,7 +10,7 @@ const Insult = (props) => {
     }, []);
 
     if (props.isFetching) {
-        return <h3>Are You Ready?</h3>
+        return <h1>Are You Ready?</h1>
     }
 
     return (
