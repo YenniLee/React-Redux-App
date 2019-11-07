@@ -1,8 +1,8 @@
 import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE } from '../actions';
 
 const initialState = {
-    insults: [],
-    isfetching: false,
+    insult: '',
+    isFetching: false,
     error: ''
 };
 
@@ -12,14 +12,14 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state, 
                 isFetching: true, 
-                error: ''
+                error: '',
             };
         case FETCH_SUCCESS: 
             return {
                 ...state, 
                 isFetching: false, 
                 error: '',
-                insults: action.payload
+                insult: action.payload
             };
         case FETCH_FAILURE: 
             return {
